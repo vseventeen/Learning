@@ -31,8 +31,8 @@ class WindowBlock implements Runnable {
 					try {
 						System.out.println(Thread.currentThread().getName() + 
 								"Âô³öÁË" + num + "ºÅÆ±.");
-						num--;
 						Thread.sleep(10);
+						num--;
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
