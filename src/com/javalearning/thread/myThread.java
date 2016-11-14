@@ -1,4 +1,4 @@
-package threadtest;
+package com.javalearning.thread;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
@@ -18,7 +18,7 @@ public class myThread {
 			if (i == 20) { // 方式1
 				Thread1 thread1 = new Thread1();
 				thread1.start();
-				// new Thread2().start();
+				// new Thread1().start();
 				
 			} else if (i == 40) { // 方式2
 				Runnable runnable = new Thread2();

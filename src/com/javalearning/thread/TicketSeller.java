@@ -1,13 +1,10 @@
-package threadtest;
+package com.javalearning.thread;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * 线程安全 
- * 	1. 同步代码块 
- * 	2. 同步方法 
- * 	3. 同步锁Lock
+ * 线程04 线程安全 1. 同步代码块 2. 同步方法 3. 同步锁Lock
  */
 
 public class TicketSeller {
@@ -27,15 +24,15 @@ class WindowBlock implements Runnable {
 	public void run() {
 		for (int i = 0; i <= 100; i++) {
 			synchronized (this) { // this代表Window对象，该对象被多线程共享
-				if (num > 0) {
-					try {
-						System.out.println(Thread.currentThread().getName() + 
-								"卖出了" + num + "号票.");
+				try {
+					if (num > 0) {
+						System.out.println(Thread.currentThread().getName()
+								+ "卖出了" + num + "号票.");
 						Thread.sleep(10);
 						num--;
-					} catch (Exception e) {
-						e.printStackTrace();
 					}
+				} catch (Exception e) {
+					e.printStackTrace();
 				}
 			}
 		}
@@ -53,12 +50,11 @@ class WindowMethod implements Runnable {
 		}
 	}
 
-	// 非静态方法，监听对象为被多线程共享的对象（this）
 	synchronized private void sell() {
 		if (num > 0) {
 			try {
-				System.out.println(Thread.currentThread().getName() + 
-						"卖出了" + num + "号票.");
+				System.out.println(Thread.currentThread().getName()
+						+ "卖出了" + num + "号票.");
 				Thread.sleep(10);
 				num--;
 			} catch (Exception e) {
@@ -79,7 +75,7 @@ class WindowLock implements Runnable {
 			lock.lock(); // 获取锁
 			if (num > 0) {
 				try {
-					System.out.println(Thread.currentThread().getName() 
+					System.out.println(Thread.currentThread().getName()
 							+ "卖出了" + num + "号票.");
 					Thread.sleep(10);
 					num--;

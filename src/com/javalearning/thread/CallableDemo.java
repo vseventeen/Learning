@@ -1,4 +1,4 @@
-package threadtest;
+package com.javalearning.thread;
 
 /**
  * 
