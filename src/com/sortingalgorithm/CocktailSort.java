@@ -4,6 +4,9 @@ import java.util.Arrays;
 
 /**
  * 双冒泡排序：递增将大值置于末位，递减将小值置于首位
+ * 时间复杂度：O(n^2)
+ * 空间复杂度：O(1)
+ * 不稳定排序
  */
 
 public class CocktailSort {

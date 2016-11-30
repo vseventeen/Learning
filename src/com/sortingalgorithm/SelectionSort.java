@@ -5,6 +5,9 @@ import java.util.Arrays;
 /**
  * 选择排序：每一轮挑出最小值（最大值），置于待排序列首位 
  * （每一次比较都将较小的放到第i个位置，一轮过后，该值就为最小值）
+ * 时间复杂度：O(n^2)
+ * 空间复杂度：O(1)
+ * 稳定排序
  */
 
 public class SelectionSort {

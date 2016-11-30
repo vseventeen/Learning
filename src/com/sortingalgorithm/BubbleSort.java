@@ -5,6 +5,9 @@ import java.util.Arrays;
 /**
  * 冒泡排序：每一轮相邻两个比较，得出最大值（最小值）
  *          并将该值置于待排序列末位
+ * 时间复杂度：O(n^2)
+ * 空间复杂度：O(1)
+ * 稳定排序
  */
 
 public class BubbleSort {
@@ -29,7 +32,7 @@ public class BubbleSort {
 					src[j] = temp;
 				}
 			}
-			System.out.println("第"+(i+1)+"趟排序后："+Arrays.toString(src));
+//			System.out.println("第"+(i+1)+"趟排序后："+Arrays.toString(src));
 		}
 	}
 }

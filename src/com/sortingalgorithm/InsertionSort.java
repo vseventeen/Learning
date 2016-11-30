@@ -3,7 +3,9 @@ package com.sortingalgorithm;
 import java.util.Arrays;
 /**
  * 插入排序：待排元素之前的序列为已排序列，将待排元素插入适当位置
- *
+ * 时间复杂度：O(n^2)
+ * 空间复杂度：O(1)
+ * 稳定排序
  */
 
 public class InsertionSort {
